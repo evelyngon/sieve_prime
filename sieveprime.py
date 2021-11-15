@@ -7,12 +7,14 @@ def inquire_number():
     return number
 
 def sieveprime(n):
-    notprimes = []
-    for i in range(2, n+1):
-        if i not in notprimes:
-            print (i)
-            for j in range(i*i, n+1, i):
-                notprimes.append(j)
+  notprimes = []
+  primes = []
+  for i in range(2, n+1):
+      if i not in notprimes:
+         primes.append(i)
+         print (i)
+         for j in range(i*i, n+1, i):
+             notprimes.append(j)
 
 if __name__=="__main__":
     number = inquire_number()
