@@ -3,6 +3,8 @@
 
 def inquire_number():
     number = int (input("Hey!, enter an integer number n>1? "))
+    if number <= 1:
+       print ("Hey!, enter an integer number n>1 ")
     return number
 
 def sieveprime(n):
