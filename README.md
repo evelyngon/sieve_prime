@@ -1,2 +1,2 @@
-# sieve of Eratosthenes (python implementation)
+# Sieve of Eratosthenes (python implementation)
 The sieve of Eratosthenes finds all prime numbers up to any given integer.
