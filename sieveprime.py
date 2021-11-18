@@ -1,6 +1,8 @@
 #!/usr/bin/env python 
 #Sieve of Eratosthenes: algorithm steps for primes below a number
 
+import time
+
 def inquire_number():
     number = int (input("Hey!, enter an integer number n>1? "))
     if number <= 1:
@@ -18,6 +20,11 @@ def sieveprime(n):
              notprimes.append(j)
   return primes
 if __name__=="__main__":
+    start_time = time.time()
+
     number = inquire_number()
     numbers = sieveprime(number) 
     print (numbers)
+
+    execution_time = time.time() - start_time
+    print("--- %s seconds ---" % execution_time)
