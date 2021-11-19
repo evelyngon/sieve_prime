@@ -15,6 +15,8 @@ def inquire_input():
 
     return value
 
+import time
+
 
 def sieveprime(n):
   notprimes = []
@@ -28,5 +30,9 @@ def sieveprime(n):
   return primes
 if __name__=="__main__":
     number = inquire_input()
+    start_time = time.time()
     numbers = sieveprime(number) 
     print (numbers)
+
+    execution_time = time.time() - start_time
+    print("--- %s seconds ---" % execution_time)
