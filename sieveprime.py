@@ -1,11 +1,20 @@
 #!/usr/bin/env python 
 #Sieve of Eratosthenes: algorithm steps for primes below a number
 
-def inquire_number():
-    number = int (input("Hey!, enter an integer number n>1? "))
-    if number <= 1:
-       print ("Hey!, enter an integer number n>1 ")
-    return number
+def inquire_input():
+    while True:
+        number = input("Please enter an integer number greater than 1: ")
+        try:
+            value = int(number)
+            if value > 1:
+                break
+            else:
+                print("Number can't be negative, try again")
+        except ValueError:
+            print("Input must be an integer number greater than 1, try again")
+
+    return value
+
 
 def sieveprime(n):
   notprimes = []
@@ -18,6 +27,6 @@ def sieveprime(n):
              notprimes.append(j)
   return primes
 if __name__=="__main__":
-    number = inquire_number()
+    number = inquire_input()
     numbers = sieveprime(number) 
     print (numbers)
