@@ -8,7 +8,7 @@ void sieve(int n, bool *isprime) {
   for (int i=2; i<n; i++)
     isprime[i] = true;
 
-  for (int j=2; j<=sqrt(n); j++) {
+  for (int j=2; j*j<=n; j++) {
     if (isprime[j]) {
       for (int i=j*j; i<=n; i+=j)
         isprime[i] = false;
